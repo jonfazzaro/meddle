@@ -1,4 +1,3 @@
-meddle
-======
+# meddle
 
-An unobtrusive doohickey with which to inject logic upon saving changes to data.
+A featherweight way to add domain logic to your Entity Framework model. 
