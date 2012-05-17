@@ -15,7 +15,7 @@ Anyway. Go [add Meddle to your project via NuGet](http://nuget.org/packages/Medd
 
 ## First, Implement *IWork*
 
-If you don't already have a partial class definition for your *ObjectContext* or *DataContext*, make one. Then, use it to implement Meddle's *IWork* interface, almost exactly like this:
+If you don't already have a partial class definition for your *ObjectContext* or *DbContext*, make one. Then, use it to implement Meddle's *IWork* interface, almost exactly like this:
 
 <pre>
 using System.Collections.Generic;
