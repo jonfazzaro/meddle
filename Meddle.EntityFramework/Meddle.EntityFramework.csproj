@@ -49,9 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IEntityWithObjectContext.cs" />
     <Compile Include="DbContextExtensions.cs" />
-    <Compile Include="IEntityWithDbContext.cs" />
     <Compile Include="ObjectContextExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

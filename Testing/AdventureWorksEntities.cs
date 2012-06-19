@@ -7,11 +7,6 @@ namespace Testing
 {
     public partial class AdventureWorksEntities : IWork
     {
-        partial void OnContextCreated()
-        {
-            this.SetContextOnMaterialization<AdventureWorksEntities>();
-        }
-
         public override int SaveChanges(SaveOptions options)
         {
             Meddler.Meddle(this); // here's where the meddle happens \m/
