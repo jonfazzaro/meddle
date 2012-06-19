@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Meddle.EntityFramework")]
-[assembly: AssemblyDescription("Addresses Entity Framework-specific concerns for Meddle.")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Jon Fazzaro")]
-[assembly: AssemblyProduct("Meddle")]
-[assembly: AssemblyCopyright("Copyright ©  2012, Jon Fazzaro")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Meddle.EntityFramework")]
+[assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
