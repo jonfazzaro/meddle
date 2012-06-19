@@ -63,8 +63,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AdventureWorksModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Contact.cs" />
+    <Compile Include="IEntityWithAdventureWorksEntitiesContext.cs" />
     <Compile Include="TestEntity.cs" />
     <Compile Include="TestWork.cs" />
+    <Compile Include="When_an_entity_is_materialized.cs" />
     <Compile Include="When_a_work_is_meddled.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

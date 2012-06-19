@@ -29,5 +29,15 @@ namespace Meddle.EntityFramework
                 .Where(e => e.Entity is T)
                 .Select(e => e.Entity as T);
         }
+
+        public static void SetContextOnMaterialization<T>(this ObjectContext context)
+            where T : ObjectContext
+        {
+            context.ObjectMaterialized += 
+                delegate(object sender, ObjectMaterializedEventArgs e) {
+                    (e.Entity as IEntityWithObjectContext<T>).Context = context as T;
+                };
+        }
+
     }
 }
