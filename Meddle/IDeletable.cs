@@ -6,6 +6,6 @@
     /// </summary>
     public interface IDeletable
     {
-        void OnDeleting(IWork work);
+        void OnDeleting();
     }
 }

@@ -9,17 +9,17 @@ namespace Testing
         public bool MeddledOnUpdating { get; private set; }
         public bool MeddledOnDeleting { get; private set; }
         
-        public void OnAdding(IWork work)
+        public void OnAdding()
         {
             this.MeddledOnAdding = true;
         }
 
-        public void OnUpdating(IWork work)
+        public void OnUpdating()
         {
             this.MeddledOnUpdating = true;
         }
 
-        public void OnDeleting(IWork work)
+        public void OnDeleting()
         {
             this.MeddledOnDeleting = true;
         }

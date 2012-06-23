@@ -6,6 +6,6 @@
     /// </summary>
     public interface IAddable
     {
-        void OnAdding(IWork work);
+        void OnAdding();
     }
 }
