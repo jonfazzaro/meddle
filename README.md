@@ -64,30 +64,28 @@ Meddle's *IAddable*, *IUpdatable*, and *IDeletable* interfaces respectively prov
 <pre>
 public partial class Product : IDeletable , IAddable
 {
-    public void OnDeleting(IWork work)
+    public void OnDeleting()
     {
         if (this.PurchaseOrderDetails.Any())
             throw new ApplicationException(
                 "This product is a special unicorn and it cannot be deleted." );
     }
 
-    public void OnAdding(IWork work)
+    public void OnAdding()
     {
         if (UserPreferences.NoDuplicateProductNames)
         {
-            // the context is available via the work parameter
-            // for testing more intense rules involving other
-            // data in the system
-            var context = work as SpecialUnicornEntities;
-
-            if (context.Products.Count(p => p.Name.Equals(this.Name)) > 1)
+            using (context as new SpecialUnicornEntities())
             {
-                var message = "A product with the same name already exists.";
-
-                if (UserPreferences.ErrorMessageIntensity == ErrorMessageIntensity.Abusive)
-                    message += " Be more creative next time. Loser.";
-
-                throw new ApplicationException(message);
+                if (context.Products.Any(p => p.Name.Equals(this.Name)))
+                {
+                    var message = "A product with the same name already exists.";
+    
+                    if (UserPreferences.ErrorMessageIntensity == ErrorMessageIntensity.Abusive)
+                        message += " Be more creative next time. Loser.";
+    
+                    throw new ApplicationException(message);
+                }
             }
         }
     }
@@ -99,7 +97,7 @@ You can also quietly correct user input before it gets saved:
 <pre>
 public partial class Employee : IUpdatable
 {
-    public void OnUpdating(IWork work)
+    public void OnUpdating()
     {
         // employee titles must always be in title case!
         this.Title =
