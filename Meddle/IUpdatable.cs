@@ -6,6 +6,6 @@
     /// </summary>
     public interface IUpdatable
     {
-        void OnUpdating();
+        void OnUpdating(IWork work);
     }
 }

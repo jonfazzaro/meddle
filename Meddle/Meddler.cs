@@ -20,13 +20,13 @@
         public void Meddle()
         {
             foreach (var e in this.Work.Added)
-                e.OnAdding();
+                e.OnAdding(this.Work);
 
             foreach (var e in this.Work.Updated)
-                e.OnUpdating();
+                e.OnUpdating(this.Work);
 
             foreach (var e in this.Work.Deleted)
-                e.OnDeleting();
+                e.OnDeleting(this.Work);
         }
 
         /// <summary>
